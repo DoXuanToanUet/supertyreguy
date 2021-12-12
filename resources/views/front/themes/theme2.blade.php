@@ -28,7 +28,7 @@
             return $html;
         }
     @endphp
-
+    <p>This is test </p>
     @if ($extra_settings->is_t2_slider == 1)
         <div class="slider-area-wrapper pt-3 mt-3">
             <div class="container">

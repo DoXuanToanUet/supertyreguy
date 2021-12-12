@@ -18,7 +18,6 @@
       </div>
     </div>
   </div>
-  <p>This is test update code for git</p>
   <!-- Page Content-->
   <div class="container padding-bottom-3x mb-1 login-form">
     <div class="row d-flex justify-content-center">
