@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/doxuanto/public_html/core
+    - /bin/cp * $DEPLOYPATH
+   
