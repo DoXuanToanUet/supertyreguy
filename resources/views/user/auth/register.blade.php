@@ -97,7 +97,7 @@
               
               <div class="col-12 text-center">
                 <button class="btn btn-primary margin-bottom-none btn-block btn-login" type="submit">{{__('Create Account')}}</button>
-                <p class="text-center " style="margin-top:100px">Already have an account?<a href="{{ route('user.register') }}" style="color:#0393D4">Login</a></p>
+                <p class="text-center " style="margin-top:100px">Already have an account?<a href="{{ route('user.register') }}" style="color:#0393D4;padding-left:5px">Login</a></p>
               </div>
             </form>
                 </div>

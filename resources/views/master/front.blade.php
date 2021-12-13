@@ -77,7 +77,7 @@ body_theme4
 
 <!-- Header-->
 <header class="site-header navbar-sticky">
-    <div class="menu-top-area">
+    {{-- <div class="menu-top-area">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -120,11 +120,26 @@ body_theme4
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
   <!-- Topbar-->
     <div class="topbar">
         <div class="container">
-            <div class="row">
+            <div class="search-box-wrap d-none d-block d-flex">
+                <div class="search-box-inner align-self-center">
+                    <div class="search-box d-flex mx-auto">
+                        <form class="input-group" action="{{route('front.catalog')}}" method="get">
+                            <span class="input-group-btn">
+                            <button type="submit"><i class="icon-search"></i></button>
+                            </span>
+                            <input class="form-control" type="text" name="search" placeholder="{{__('Search by product name')}}">
+                        </form>
+                        <span class="d-block close-m-search"><i class="icon-x"></i></span>
+                    </div>
+                   
+                </div>
+                
+            </div>
+            <div class="row main-menu">
                 <div class="col-lg-12">
                     <div class="d-flex justify-content-between">
                         <!-- Logo-->
@@ -207,20 +222,20 @@ body_theme4
                             <div><i class="icon-menu"></i><span class="text-label">{{__('Menu')}}</span></div>
                             </a>
                         </div>
-                        <div class="toolbar-item hidden-on-mobile"><a href="{{route('fornt.compare.index')}}">
+                        <div class="toolbar-item hidden-on-mobile"><a href="#" title="Search">
                             <div><span class="search-icon">
                                 {{-- <i class="icon-repeat"></i> --}}
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M2 10.6699C2 5.88166 5.84034 2 10.5776 2C12.8526 2 15.0343 2.91344 16.6429 4.53936C18.2516 6.16529 19.1553 8.37052 19.1553 10.6699C19.1553 15.4582 15.3149 19.3399 10.5776 19.3399C5.84034 19.3399 2 15.4582 2 10.6699ZM19.0134 17.6543L21.568 19.7164H21.6124C22.1292 20.2388 22.1292 21.0858 21.6124 21.6082C21.0955 22.1306 20.2576 22.1306 19.7407 21.6082L17.6207 19.1785C17.4203 18.9766 17.3076 18.7024 17.3076 18.4164C17.3076 18.1304 17.4203 17.8562 17.6207 17.6543C18.0072 17.2704 18.6268 17.2704 19.0134 17.6543Z" fill="white"/>
                                     </svg>
-                                    
+                                  
                                 {{-- <span class="count-label compare_count">{{Session::has('compare') ? count(Session::get('compare')) : '0'}}</span></span> --}}
                                 {{-- <span class="text-label">{{ __('Compare') }}</span> --}}
                             </div>
                             </a>
                         </div>
-                        <div class="toolbar-item hidden-on-mobile"><a href="{{route('fornt.compare.index')}}">
-                            <div><span class="location-icon">
+                        <div class="toolbar-item hidden-on-mobile"><a href="{{route('front.order.track')}}">
+                            <div><span class="location-icon" title="Order Track">
                                 {{-- <i class="icon-repeat"></i> --}}
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 10.3178C3.5 5.71789 7.34388 2 11.9934 2C16.6561 2 20.5 5.71789 20.5 10.3178C20.5 12.6357 19.657 14.7876 18.2695 16.6116C16.7388 18.6235 14.8522 20.3765 12.7285 21.7524C12.2425 22.0704 11.8039 22.0944 11.2704 21.7524C9.13474 20.3765 7.24809 18.6235 5.7305 16.6116C4.34198 14.7876 3.5 12.6357 3.5 10.3178ZM9.19423 10.5768C9.19423 12.1177 10.4517 13.3297 11.9934 13.3297C13.5362 13.3297 14.8058 12.1177 14.8058 10.5768C14.8058 9.0478 13.5362 7.77683 11.9934 7.77683C10.4517 7.77683 9.19423 9.0478 9.19423 10.5768Z" fill="white"/>
@@ -412,7 +427,7 @@ body_theme4
             </ul>
           </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-sm-6">
             <!-- Subscription-->
             {{-- <section class="widget">
               <h3 class="widget-title">{{__('Newsletter')}}</h3>
@@ -480,7 +495,7 @@ body_theme4
           </div>
       </div>
       <!-- Copyright-->
-      <p class="footer-copyright"> {{$setting->copy_right}}</p>
+      <p class="footer-copyright mt-3"> {{$setting->copy_right}}</p>
     </div>
   </footer>
 
@@ -514,6 +529,8 @@ let extra_index_url = '{{route('front.extraindex')}}';
 <script type="text/javascript" src="{{asset('assets/front/js/lazy.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/front/js/lazy.plugin.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/front/js/myscript.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/front/custom/js/custom.js')}}"></script>
+
 @yield('script')
 {{-- 
 @if($setting->is_facebook_messenger	== '1')

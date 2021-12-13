@@ -154,8 +154,6 @@
                   </div>
                 @endforeach
               </section>
-
-
             </aside>
           </div>
         </div>

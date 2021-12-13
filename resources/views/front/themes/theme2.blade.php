@@ -28,7 +28,7 @@
             return $html;
         }
     @endphp
-    <p>This is test </p>
+  
     @if ($extra_settings->is_t2_slider == 1)
         <div class="slider-area-wrapper pt-3 mt-3">
             <div class="container">
@@ -72,9 +72,10 @@
     {{-- Section slider banner custom --}}
     <section class="banner-custom">
         <div class="container h-100">
-            <div class="row h-100">
+            <div class="row h-100 gy-3">
                 <div class="col col-lg-6 col-12 d-flex flex-column justify-content-center align-items-start">
-                    <h2 class="banner-title main-title">Tyres, Mag/Steel wheels <br/>and more </h2>
+                    <h2 class="banner-title main-title banner-desktop">Tyres, Mag/Steel wheels <br/>and more </h2>
+                    <h2 class="banner-title main-title banner-mobile">Tyres, Mag/Steel wheels and more </h2>
                     <p class="banner-text pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.</p>
                     <a href="{{ url('/shop') }}" class="btn-main">Buy Now </a>
                 </div>
@@ -90,36 +91,43 @@
                         </ul>
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="size" role="tabpanel" aria-labelledby="size-tab">
-                                <h3>Tyre Search </h3>
+                                <h3 class="search-title text-center">Tyre Search </h3>
                                 <div class="row">
-                                    <div class="col col-lg-4 col-12">
+                                    <div class="col col-lg-4 col-md-4 col-ms-4">
                                         <p>Width</p>
-                                        <option value="">
-                                            <select name="" id="">Width</select>
-                                        </option>
+                                        <select value="">
+                                            <option name="" id="">Width</option>
+                                        </select>
                                     </div>
-                                    <div class="col col-lg-4 col-12">
+                                    <div class="col col-lg-4 col-md-4 col-ms-4">
                                         <p>Width</p>
-                                        <option value="">
-                                            <select name="" id="">Width</select>
-                                        </option>
+                                        <select value="">
+                                            <option name="" id="">Width</option>
+                                        </select>
                                     </div>
-                                    <div class="col col-lg-4 col-12">
+                                    <div class="col col-lg-4 col-md-4 col-ms-4">
                                         <p>Width</p>
-                                        <option value="">
-                                            <select name="" id="">Width</select>
-                                        </option>
+                                        <select value="">
+                                            <option name="" id="">Width</option>
+                                        </select>
                                     </div>
                                 </div>
-                                <button class="btn-main">Search for tyres</button>
+                                <div class="row search-tyre">
+                                    <img class="mx-auto col-lg-6" src="{{ asset('assets/front/custom/images/bysize.png') }}" alt="">
+                                </div>
+                                
+                                <button class="btn-main btn-block">Search for tyres</button>
                             </div>
                             <div class="tab-pane fade" id="brand" role="tabpanel" aria-labelledby="brand-tab">
-                                <h3>By car model  </h3>
-                                <p>Brand</p>
-                                <option value="">
-                                    <select name="" id="">Select</select>
-                                </option>
-                                <button>Search for tyres</button>
+                                <h3 class="search-title text-center">By car model  </h3>
+                                <p>Brand:</p>
+                                    <select value="">
+                                        <option value="">All product</option>
+                                    </select>
+                                <div class="row search-tyre">
+                                    <img class="mx-auto col-lg-6" src="{{ asset('assets/front/custom/images/bycar.png') }}" alt="">
+                                </div>
+                                <button class="btn-main btn-block">Search for tyres</button>
                             </div>
                         </div>
                     </div>
@@ -133,21 +141,21 @@
         <div class="container">
             <h2 class="main-title text-center">How It Works</h2>
             <div class="row">
-                <div class="col col-lg-4 col-12 text-center">
+                <div class="col col-lg-4 col-md-4 col-12 text-center">
                     <img src="{{ asset('assets/front/custom/images/SearchTyre.png') }}" alt="">
                     <div class="content">
                         <h4>Search</h4>
                         <p>By type size or click “SHOP TYRES” button.</p>
                     </div>
                 </div>
-                <div class="col col-lg-4 col-12 text-center">
+                <div class="col col-lg-4 col-md-4 col-12 text-center">
                     <img src="{{ asset('assets/front/custom/images/Click.png') }}" alt="">
                     <div class="content">
                         <h4>Click & Buy</h4>
                         <p>Purchace your selected tyres & pay online</p>
                     </div>
                 </div>
-                <div class="col col-lg-4 col-12 text-center">
+                <div class="col col-lg-4 col-md-4 col-12 text-center">
                     <img src="{{ asset('assets/front/custom/images/Date.png') }}" alt="">
                     <div class="content">
                         <h4>Sechedule Fitting</h4>
@@ -162,19 +170,19 @@
     <section class ="show-category section-common">
         <div class="container">
             <h2 class="main-title text-center">Categories</h2>
-            <div class="row">
-                <div class="col col-lg-4 col-12">
-                    <a class="bkg-cat" href="#">
+            <div class="row gy-3">
+                <div class="col col-lg-4 col-md-4 col-12">
+                    <a class="bkg-cat" href="{{route('front.catalog').'?category=Tyres'}}">
                         <span>Tyres</span>
                     </a>
                 </div>
-                <div class="col col-lg-4 col-12">
-                    <a class="bkg-cat" href="#">
+                <div class="col col-lg-4 col-md-4 col-12">
+                    <a class="bkg-cat" href="{{route('front.catalog').'?category=Wheels'}}">
                         <span>Wheels</span>
                     </a>
                 </div>
-                <div class="col col-lg-4 col-12">
-                    <a class="bkg-cat" href="#">
+                <div class="col col-lg-4 col-md-4 col-12">
+                    <a class="bkg-cat" href="{{route('front.catalog').'?category=Batteries'}}">
                         <span>Batteries</span>
                     </a>
                 </div>
@@ -395,12 +403,12 @@
     @endif
 
     @if ($extra_settings->is_t2_featured_product == 1)
-        <section class="selected-product-section mt-50 theme2">
+        <section class="selected-product-section section-common mt-50 theme2">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="section-title section-title2 section-title3">
-                            <h2 class="h3">{{__('Featured Products')}}</h2>
+                        <div class="">
+                            <h2 class="main-title text-center">{{__('Featured Products')}}</h2>
                         </div>
                     </div>
                 </div>
@@ -448,6 +456,7 @@
                                             </div>
                                             </div>
                                         </div>
+                                        <p class="featured-badge">Featured </p>
                                     </div>
                                 @endif
                             @endforeach
@@ -459,7 +468,7 @@
         </section>
     @endif
 
-    @if ($extra_settings->is_t2_bestseller_product == 1)
+    {{-- @if ($extra_settings->is_t2_bestseller_product == 1)
         <section class="selected-product-section mt-50  theme2">
             <div class="container">
                 <div class="row">
@@ -520,15 +529,15 @@
                 </div>
             </div>
         </section>
-    @endif
+    @endif --}}
 
-    @if ($extra_settings->is_t2_toprated_product == 1)
+    {{-- @if ($extra_settings->is_t2_toprated_product == 1)
         <section class="selected-product-section mt-50  theme2">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title section-title2  section-title3">
-                            <h2 class="h3">{{__('Top Rated')}}</h2>
+                            <h2 class="main-title text-center">{{__('Top Rated')}}</h2>
                         </div>
                     </div>
                 </div>
@@ -584,7 +593,7 @@
                 </div>
             </div>
         </section>
-    @endif
+    @endif --}}
 
     @if ($extra_settings->is_t2_2_column_banner == 1)
         <div class="bannner-section mt-50">

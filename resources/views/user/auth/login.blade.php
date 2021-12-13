@@ -67,7 +67,7 @@
                     </div>
                     </div>
                   </div>
-                  <p class="text-center " style="margin-top:100px">Don't have an account? <a href="{{ route('user.register') }}" style="color:#0393D4">Register</a></p>
+                  <p class="text-center " style="margin-top:100px">Don't have an account? <a href="{{ route('user.register') }}" style="color:#0393D4;padding-left:5px">Register</a></p>
               </form>
             </div>
             {{-- <div class="col-lg-12 col-12">
