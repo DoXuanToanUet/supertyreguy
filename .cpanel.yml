@@ -1,10 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/doxuanto/superguy/core
-    - /bin/cp -R  app $DEPLOYPATH
-    - /bin/cp -R  resources $DEPLOYPATH
-    - /bin/cp -R  routes $DEPLOYPATH
     - export DEPLOYPATH=/home/guysupertyre/public_html/core
     - /bin/cp -R  app $DEPLOYPATH
     - /bin/cp -R  resources $DEPLOYPATH
