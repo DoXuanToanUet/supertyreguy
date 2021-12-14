@@ -692,7 +692,98 @@
             </div>
         </section>
     @endif
-
+    
+    {{-- Section Testimonial  --}}
+    <section class="testimonial section-common">
+        <div class="container">
+            <div class="owl-carousel owl-theme owl-testimonial row g-4">       
+                <div class="item-wrap col-lg-4">
+                    <div class="item">
+                        <p>The biggest challenge an older designer faces is the ability to learn new tools and apply its experiences. Figma Masterclass provided the creative support to lift my doubts of achieving my goals. The greatest reward I received from this course. I was able to impress a potential employer by auditing their current product with just few changes to become top candidate to join their team. Thank you Michael you have lifted me above the mist that swallows a designer facing Ageism.</p>
+                        <div class="star">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="review-person d-flex mt-2">
+                            <img src="" alt="" class="me-3">
+                            <p class="person-title">CR7</p>
+                        </div>
+                    </div>          
+                </div>
+                <div class="item-wrap col-lg-4">
+                    <div class="item">
+                        <p>The biggest challenge an older designer faces is the ability to learn new tools and apply its experiences. Figma Masterclass provided the creative support to lift my doubts of achieving my goals. The greatest reward I received from this course. I was able to impress a potential employer by auditing their current product with just few changes to become top candidate to join their team. Thank you Michael you have lifted me above the mist that swallows a designer facing Ageism.</p>
+                        <div class="star">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="review-person d-flex mt-2">
+                            <img src="" alt="" class="me-3">
+                            <p class="person-title">CR7</p>
+                        </div>
+                    </div>          
+                </div>
+                <div class="item-wrap col-lg-4">
+                    <div class="item">
+                        <p>The biggest challenge an older designer faces is the ability to learn new tools and apply its experiences. Figma Masterclass provided the creative support to lift my doubts of achieving my goals. The greatest reward I received from this course. I was able to impress a potential employer by auditing their current product with just few changes to become top candidate to join their team. Thank you Michael you have lifted me above the mist that swallows a designer facing Ageism.</p>
+                        <div class="star">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="review-person d-flex mt-2">
+                            <img src="" alt="" class="me-3">
+                            <p class="person-title">CR7</p>
+                        </div>
+                    </div>          
+                </div>
+                <div class="item-wrap col-lg-4">
+                    <div class="item">
+                        <p>The biggest challenge an older designer faces is the ability to learn new tools and apply its experiences. Figma Masterclass provided the creative support to lift my doubts of achieving my goals. The greatest reward I received from this course. I was able to impress a potential employer by auditing their current product with just few changes to become top candidate to join their team. Thank you Michael you have lifted me above the mist that swallows a designer facing Ageism.</p>
+                        <div class="star">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="review-person d-flex mt-2">
+                            <img src="" alt="" class="me-3">
+                            <p class="person-title">CR7</p>
+                        </div>
+                    </div>          
+                </div>
+                <div class="item-wrap col-lg-4">
+                    <div class="item">
+                        <p>The biggest challenge an older designer faces is the ability to learn new tools and apply its experiences. Figma Masterclass provided the creative support to lift my doubts of achieving my goals. The greatest reward I received from this course. I was able to impress a potential employer by auditing their current product with just few changes to become top candidate to join their team. Thank you Michael you have lifted me above the mist that swallows a designer facing Ageism.</p>
+                        <div class="star">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="review-person d-flex mt-2">
+                            <img src="" alt="" class="me-3">
+                            <p class="person-title">CR7</p>
+                        </div>
+                    </div>          
+                </div>
+                {{-- <div class="owl-nav">
+                    <div class="owl-prev"></div>
+                    <div class="owl-next"></div>
+                </div> --}}
+            </div>
+        </div>
+    </section>
     {{-- Section Newsletter --}}
     <section class ="newsletter">
         <div class="container">
